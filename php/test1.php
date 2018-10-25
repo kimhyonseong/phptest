@@ -17,7 +17,7 @@ echo "$a + $b = " , $a+$b , "<br>";  //double quotes
     echo "asd\n" . $a.=$b ."<br>"; //No , use .-> can't calculate
 //echo "$a + $b = " . $a+$b; error
 //print "$a + $b = " . $a+$b; error
-    echo '$a + $b = '. '$a+$b'.'<br>';  //single quotes
+    echo '$a + $b = '. '$a+$b'.'<br>'."<br>";  //single quotes
     echo "\nDate\tName\tPayment\rK"."<br>";  //\n \t \r
 
     $out= <<<_END
@@ -25,7 +25,7 @@ echo "$a + $b = " , $a+$b , "<br>";  //double quotes
 <br>Therefor, if you write the code as cleverly as possible, you are,
 by definition, not smart enough to debug "it".
 <br><br>
-- Brian W. Kernighan<br>
+- Brian W. Kernighan<br><br>
 _END;
 //If no write <br>, Don't Line break
     echo $out;
@@ -34,5 +34,20 @@ _END;
     $pi="3.14"; $radius=5;
     echo $pi * ($radius * $radius),"<br>";
     echo "This is Line ". __Line__ . " of file " . __File__."<br>";
-    echo "Namespace " . __NAMESPACE__;
+
+    function longdate($text,$timestamp)
+    {
+        return $text . date("l F jS Y",$timestamp);
+    }
+    $temp = "The date is ";
+    echo longdate($temp,time()),"<br>";
+
+    function static_test()  //static use
+    {
+        static $count = 0;
+        echo " ",$count." ";
+        $count++;
+    }
+    static_test(); static_test(); echo "<br>";
+
 ?>
