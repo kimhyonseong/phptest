@@ -50,4 +50,67 @@
         if($j == 0) continue;
         echo "$j " . (10/$j) . "<br>";
     }
+
+    echo strrev(" .dlrow olleH");  //문자 반전
+    echo str_repeat("Hip ",2);  //문자 반복
+    echo strtoupper("hooray!")."<br>";  //대문자 전환
+
+    $lowered = strtolower("aNY # OF LETTERs and Punctuation you WANT");
+    echo $lowered."<br>";  //소문자로 바꿈
+
+    $ucfixed = ucfirst("any # of letters and punctuation you want");
+    echo $ucfixed."<br>";  //맨앞에꺼만 대문자로 바꿈 -> 소문자로 바꾼걸 일로 넣어야됨
+
+    print (5-8)." ".abs(5-8)."<br>";
+
+    echo fix_names("WILLIAM","henry","gatES") . "<br>";
+    function fix_names($n1,$n2,$n3)
+    {
+        $n1 = ucfirst(strtolower($n1));
+        $n2 = ucfirst(strtolower($n2));
+        $n3 = ucfirst(strtolower($n3));
+
+        return $n1. " " . $n2 . " " . $n3;
+    }
+
+    $names = fix_names1("WILLIAM","henry","gatES");
+    echo $names[0] . " " . $names[1] . " " . $names[2] ." 배열로". "<br>";
+    function fix_names1($n1,$n2,$n3)
+    {
+        $n1 = ucfirst(strtolower($n1));
+        $n2 = ucfirst(strtolower($n2));
+        $n3 = ucfirst(strtolower($n3));
+
+        return array($n1,$n2,$n3);
+    }
+
+    $a1 = "WILLIAM"; $a2 = "henry"; $a3 = "gatES";
+    echo $a1." ".$a2." ".$a3."<br>";
+    fix_names2($a1,$a2,$a3);
+    echo $a1." ".$a2." ".$a3." - 참조전달(사용하지 말것)"."<br>";
+    function fix_names2(&$n1,&$n2,&$n3)
+    {
+        $n1 = ucfirst(strtolower($n1));
+        $n2 = ucfirst(strtolower($n2));
+        $n3 = ucfirst(strtolower($n3));
+    }
+
+    $b1 = "WILLIAM"; $b2 = "henry"; $b3 = "gatES";
+    echo $b1." ".$b2." ".$b3."<br>";
+    fix_names3();
+    echo $b1." ".$b2." ".$b3." 글로벌로 바꿈"."<br>";
+    function fix_names3()
+    {
+        global $b1; $b1 = ucfirst(strtolower($b1));
+        global $b2; $b2 = ucfirst(strtolower($b2));
+        global $b3; $b3 = ucfirst(strtolower($b3));
+    }
+
+    if(function_exists("array_combine")) //
+    {
+        echo "Function exists"."<br>";
+    }
+    else echo "Function does not exist - better write our own"."<br>";
+    echo phpversion()."<br>";
+
     ?>
