@@ -1,0 +1,9 @@
+header {font-size: 40px; padding:10px;}
+nav {border-bottom: solid gray 1px;}
+nav ul li{display: inline-block; border-left: black 1px solid; padding:0 10px;}
+nav ul li:first-child{border-left: none;}
+body {text-align: center;}
+#menu {text-align: right;}
+#menu li{display: inline-block; border-left: black solid 1px; padding:0 10px;}
+#menu li:last-child{border-right: black 1px solid;}
+h2 {border-bottom: black 1px solid;}
