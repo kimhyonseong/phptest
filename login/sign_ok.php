@@ -30,9 +30,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {text-align: center;}
+        #menu {text-align: right;}
+        #menu li{display: inline-block; border-left: black solid 1px; padding:0 10px;}
+        #menu li:last-child{border-right: black 1px solid;}
+    </style>
 </head>
 <body>
-가입이 완료되었습니다.
+<header>
+    <a href="index.php"><h1>HS site</h1></a>
+</header>
+<nav>
+    <ul id="menu">
+        <li><a href="http://localhost/firststorm/login/sign.php">회원가입</a></li>
+        <li><a href="http://localhost/firststorm/login/login.php">로그인</a></li>
+    </ul>
+</nav>
+<h2>가입이 완료되었습니다.</h2>
+<a href="index.php">확인</a>
 </body>
 </html>
 

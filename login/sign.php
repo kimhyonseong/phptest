@@ -14,7 +14,7 @@
         function check() {
             var ud = document.getElementById("id").value;
             if(ud){
-              window.open("check.php?id="+ud,"ch","width=300,height=100");
+              window.open("check.php?id="+ud,"","width=300,height=100");
             }
             else alert("아이디를 입력하세요");
         }
@@ -22,7 +22,7 @@
 </head>
 <body>
 <header>
-    <h1>HS site</h1>
+    <a href="index.php"><h1>HS site</h1></a>
 </header>
 <nav>
     <ul id="menu">

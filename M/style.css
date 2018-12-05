@@ -1,5 +1,7 @@
 header {border-bottom: gray solid 1px; padding:20px;}
+body.black{background: black; color: white;}
+body.white{background:white; color: black;}
 nav {border-right: 1px solid gray; width:200px; height: 600px; float: left}
-nav ol{list-style: none;}
-article {float: left; padding:20px;}
-h2 {font-size:50px; color:red;}
+nav ol{list-style: none; padding: 1px;}
+article {float: left; padding:20px; width: 300px;}
+#control{float: right;}

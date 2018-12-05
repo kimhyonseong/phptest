@@ -8,11 +8,12 @@
         #menu {text-align: right;}
         #menu li{display: inline-block; border-left: black solid 1px; padding:0 10px;}
         #menu li:last-child{border-right: black 1px solid;}
+        body article table {width: 350px; height: 100px; margin: auto;}
     </style>
 </head>
 <body>
 <header>
-    <h1>HS site</h1>
+    <a href="index.php"><h1>HS site</h1></a>
 </header>
 <nav>
     <ul id="menu">
@@ -21,8 +22,13 @@
     </ul>
 </nav>
 <article>
-    <h2>로그인</h2>
-
+    <form method="post" action="log_ok.php">
+        <table border="0" cellpadding="2" cellspacing="2">
+            <tr><td>ID</td><td><input type="text" name="id" id="id" title="id"/></td></tr>
+            <tr><td>password</td><td><input type="text" name="pw" id="pw" title="pw"/></td></tr>
+        </table>
+        <input type="submit" value="로그인"> <input type="reset" value="삭제">
+    </form>
 </article>
 </body>
 </html>
