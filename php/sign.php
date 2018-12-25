@@ -13,9 +13,9 @@
         <tr>
             <td width="100px" align="center" valign="middle">ID</td>
             <td>
-                <input type="text" size="20" name="아이디" title="id">
+                <input type="text" size="20" name="아이디" title="id" required>
             </td>
-            <td><input type="button" title="확인" id="중복확인1" value="중복확인"></td>
+            <td><input type="submit" title="확인" id="중복확인1" value="중복확인" formaction="query.php"></td>
         </tr>
 
         <tr>

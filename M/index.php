@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="http://localhost/firststorm/M/style.css?ver=3">
+    <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css"  crossorigin="anonymous">
+
 </head>
 <body id="target">
 <header>
@@ -40,5 +42,8 @@
         }
     ?>
 </article>
+
+<script src="bootstrap-3.3.4-dist/js/npm.js" crossorigin="anonymous"></script>
+<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 </body>
 </html>
