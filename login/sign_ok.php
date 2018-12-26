@@ -8,7 +8,9 @@
     </style>
 </head>
 <body>
-
+<?php
+    include 'php/quary.php';
+?>
 <article>
     <h1>Welcome New User</h1>
 
