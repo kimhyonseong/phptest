@@ -27,30 +27,14 @@
 <nav>
     <ul id="menu">
         <?php
-            $i=0;
-            $files = scandir('main');
-            while($i<count($files)) {
-                if ($files[$i] == '.' || $files[$i]=='..') {
-                    ++$i;
-                    continue;
-                }
-                    ?>
-                    <li><a href="index.php?F=<?= $files[$i] ?>"><?= $files[$i] ?></a></li>
-                    <?php
-                ++$i;
-            }
+            include 'php/print_php.php';
+            print_menu();
         ?>
     </ul>
 </nav>
 <article>
     <?php
-        $i=0;
-        if(isset($_GET['F'])) {
-            echo file_get_contents('main/' . $_GET['F']);
-        }
-        else {
-            echo "Hello";
-        }
+        print_description();
     ?>
 </article>
 </body>

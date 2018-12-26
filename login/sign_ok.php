@@ -9,7 +9,8 @@
 </head>
 <body>
 <?php
-    include 'php/quary.php';
+    include 'php/DBconnect.php';
+    include 'php/Signquery.php';
 ?>
 <article>
     <h1>Welcome New User</h1>

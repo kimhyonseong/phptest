@@ -6,8 +6,8 @@
      * Time: 오후 3:17
      */
 
-    $special="/[~!@#$%^&*()_\-\+\=\\\'\"\<>,\.\|;:`\/]/";  //특수문자 패턴
-    $con=mysqli_connect('localhost','root','','lon');
+    include 'DBconnect.php';
+    include 'specialSTR.php';
 
     $id=$_POST['id'];
     $password=$_POST['password'];
@@ -19,10 +19,10 @@
     if($id==null || $password==null || $email1==null )
     {
         $msg = "빈칸을 입력해주세요.";
-        //echo "<script>alert('$msg'); history.back(); </script>";
-        var_dump($id);
-        var_dump($password);
-        var_dump($email1);
+        echo "<script>alert('$msg'); history.back(); </script>";
+        //var_dump($id);
+        //var_dump($password);
+        //var_dump($email1);
     }
 
     /*else if (preg_match($special,$id) || preg_match($special,$email1) || preg_match($special,$email2) || preg_match($special,$name) || preg_match($special,$phone))
@@ -31,7 +31,7 @@
         echo "<script>alert('$msg'); history.back();</script>";
     }*/
 
-    else if (preg_match($special,$id) || preg_match($special,$email1) )
+    else if (return_special($id) || return_special($email1) )
     {
         $msg = "특수문자는 사용할 수 없습니다.";
         echo "<script>alert('$msg'); history.back();</script>";
@@ -47,8 +47,8 @@
         //$real_phone = mysqli_real_escape_string($con,$phone);
         //$real_name = mysqli_real_escape_string($con,$name);
 
-        $check_quary = "select id from imf where id='$real_id'";
-        $check_result = mysqli_query($con,$check_quary);
+        $check_query = "select id from imf where id='$real_id'";
+        $check_result = mysqli_query($con,$check_query);
         $check = mysqli_fetch_array($check_result);
         $check_id = $check['id'];
 
@@ -60,13 +60,13 @@
 
         else
         {
-            $insert_quary = "INSERT INTO imf(id,pw,email) values(
+            $insert_query = "INSERT INTO imf(id,pw,email) values(
                           '$real_id',
                           '$real_pw',
                           '$real_email1'
                           )";
 
-            mysqli_query($con,$insert_quary);
+            mysqli_query($con,$insert_query);
         }
     }
     ?>

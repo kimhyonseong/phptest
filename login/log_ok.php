@@ -1,6 +1,3 @@
-<?php
-    $conn = mysqli_connect('localhost','root','','lon');
-    ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
+<?php
+    include 'php/DBconnect.php';
+    include 'php/Loginquery.php';
+?>
 <h2>로그인 성공</h2>
 </body>
 </html>

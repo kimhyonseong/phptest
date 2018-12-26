@@ -1,8 +1,8 @@
 <article>
     <form method="post" action="log_ok.php">
         <table border="0" cellpadding="2" cellspacing="2">
-            <tr><td>ID</td><td><input type="text" name="id" id="id" title="id"/></td></tr>
-            <tr><td>password</td><td><input type="password" name="pw" id="pw" title="pw"/></td></tr>
+            <tr><td><input type="text" name="id" id="id" title="id" placeholder="ID"/></td></tr>
+            <tr><td><input type="password" name="pw" id="pw" title="pw" placeholder="password"/></td></tr>
         </table>
         <input type="submit" value="로그인"> <input type="reset" value="삭제">
     </form>
