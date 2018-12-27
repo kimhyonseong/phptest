@@ -27,7 +27,7 @@
 <nav>
     <ul id="menu">
         <?php
-            include 'php/print_php.php';
+            include_once 'php/print_php.php';
             print_menu();
         ?>
     </ul>

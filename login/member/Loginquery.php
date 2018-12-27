@@ -5,8 +5,8 @@
      * Date: 2018-12-26
      * Time: 오후 1:30
      */
-    include 'DBconnect.php';
-    include 'specialSTR.php';
+    include_once  __DIR__.'/../php/DBconnect.php';
+    include_once 'specialSTR.php';
 
     $id = $_POST['id'];
     $pw = $_POST['pw'];

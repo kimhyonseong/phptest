@@ -6,8 +6,8 @@
      * Time: 오후 3:17
      */
 
-    include 'DBconnect.php';
-    include 'specialSTR.php';
+    include_once __DIR__.'/../php/DBconnect.php';  //상위폴더 인클루드
+    include_once 'specialSTR.php';
 
     $id=$_POST['id'];
     $password=$_POST['password'];

@@ -11,12 +11,13 @@
         $i=0;
         $files = scandir('description');
         while($i<count($files)) {
-            if ($files[$i] == '.' || $files[$i]=='..') {
+            $title = htmlspecialchars($files[$i]);
+            if ($title == '.' || $title=='..') {
                 ++$i;
                 continue;
             }
             ?>
-            <li><a href="http://localhost/firststorm/login/index.php?F=<?= $files[$i] ?>"><?= $files[$i] ?></a></li>
+            <li><a href="http://localhost/firststorm/login/index.php?F=<?= $title ?>"><?= $title ?></a></li>
             <?php
             ++$i;
         }  // i는 4

@@ -6,8 +6,8 @@
 </head>
 <body>
 <?php
-    include 'php/DBconnect.php';
-    include 'php/Loginquery.php';
+    include_once 'php/DBconnect.php';
+    include_once 'member/Loginquery.php';
 ?>
 <h2>로그인 성공</h2>
 </body>
