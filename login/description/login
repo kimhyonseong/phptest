@@ -1,5 +1,5 @@
 <article>
-    <form method="post" action="log_ok.php">
+    <form method="post" action="member/Login.php">
         <table border="0" cellpadding="2" cellspacing="2">
             <tr><td><input type="text" name="id" id="id" title="id" placeholder="ID"/></td></tr>
             <tr><td><input type="password" name="pw" id="pw" title="pw" placeholder="password"/></td></tr>

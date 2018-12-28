@@ -15,7 +15,7 @@
 <body>
 <?php
     include_once 'php/DBconnect.php';
-    include_once 'member/Signquery.php';
+    include_once 'member/Sign.php';
 ?>
 <article>
     <h1>Welcome New User</h1>

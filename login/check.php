@@ -4,7 +4,7 @@
     if ($conn->connect_error) die($conn->connect_error);
 
     $ID=htmlspecialchars($_GET['id']);
-    $query1="select * from imf where id =\"$ID\"";
+    $query1="select * from imf where id ='$ID'";
     //$sql=mysqli_query($conn,$query1,1);
     $find = $conn->query($query1);
     $member = $find->fetch_assoc();
