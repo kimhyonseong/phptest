@@ -12,29 +12,24 @@
     $id=$_POST['id'];
     $password=$_POST['password'];
     $email1=$_POST['email1'];
+    $name=$_POST['name'];
     //$email2=$_POST['email2'];
-    //$name=$_POST['name'];
     //$phone=$_POST['phone'];
 
-    if($id==null || $password==null || $email1==null )
+    if($id==null || $password==null || $email1==null || $name==null)
     {
         $msg = "빈칸을 입력해주세요.";
         echo "<script>alert('$msg'); history.back(); </script>";
-        //var_dump($id);
-        //var_dump($password);
-        //var_dump($email1);
     }
 
-    /*else if (preg_match($special,$id) || preg_match($special,$email1) || preg_match($special,$email2) || preg_match($special,$name) || preg_match($special,$phone))
+    else if (return_special($id) || return_special($email1) || return_special($name))
     {
         $msg = "특수문자는 사용할 수 없습니다.";
         echo "<script>alert('$msg'); history.back();</script>";
-    }*/
-
-    else if (return_special($id) || return_special($email1) )
-    {
-        $msg = "특수문자는 사용할 수 없습니다.";
-        echo "<script>alert('$msg'); history.back();</script>";
+        /*var_dump($id);
+        var_dump($password);
+        var_dump($email1);
+        var_dump($name);*/
     }
 
     else
@@ -42,10 +37,11 @@
         $real_id = mysqli_real_escape_string($con,$id);
         $real_pw = mysqli_real_escape_string($con,$password);
         $real_email1 = mysqli_real_escape_string($con,$email1);
+        $real_name = mysqli_real_escape_string($con,$name);
         //$real_email2 = mysqli_real_escape_string($con,$email2);
         //$real_email = $real_email1.$real_email2;
         //$real_phone = mysqli_real_escape_string($con,$phone);
-        //$real_name = mysqli_real_escape_string($con,$name);
+
 
         $check_query = "select id from imf where id='$real_id'";
         $check_result = mysqli_query($con,$check_query);
@@ -60,12 +56,9 @@
 
         else
         {
-            $insert_query = "INSERT INTO imf(id,pw,email) values(
-                          '$real_id',
-                          '$real_pw',
-                          '$real_email1'
-                          )";
-
+            $insert_query = "INSERT INTO imf(id,pw,email,name) values('$real_id','$real_pw','$real_email1','$real_name')";
+            //var_dump($name);
+            //var_dump($real_name);
             mysqli_query($con,$insert_query);
         }
     }

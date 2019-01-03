@@ -15,7 +15,7 @@
 <?php
     #include_once 'php/DBconnect.php';
     #include_once 'member/Login.php';
-    echo $_SESSION['user']."님 환영합니다.<br>";
+    echo $_SESSION['name']."님 환영합니다.<br>";
 ?>
 
 <input type="button" onclick="location.href='member/Withdrawal.php'" value="회원탈퇴">

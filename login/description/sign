@@ -1,9 +1,10 @@
 <article>
     <form method="post" action="sign_ok.php">
         <table  border="0" cellpadding="2" cellspacing="2">
-            <tr><td><input type="text" name="id" id="id" title="id" placeholder="ID"/></td><td><input type="button" value="중복확인" onclick="check()"></td></tr>
-            <tr><td><input type="password" name="password" id="pw" title="pw" placeholder="password"/></td></tr>
-            <tr><td><input type="text" name="email1" id="email1" title="email1" placeholder="E-mail"/></td></tr>
+            <tr><td><input type="text" name="id" title="id" placeholder="ID"/></td><td><input type="button" value="중복확인" onclick="check()"></td></tr>
+            <tr><td><input type="password" name="password" title="pw" placeholder="password"/></td></tr>
+            <tr><td><input type="text" name="email1" placeholder="E-mail"/></td></tr>
+            <tr><td><input type="text" name="name" placeholder="Name"/></td></tr>
         </table>
         <input type="submit" value="가입"> <input type="reset" value="삭제">
     </form>
