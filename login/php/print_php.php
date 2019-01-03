@@ -17,7 +17,7 @@
                 continue;
             }
             ?>
-            <li><a href="http://localhost/firststorm/login/index.php?F=<?= $title ?>"><?= $title ?></a></li>
+            <li><a href="index.php?F=<?= $title ?>"><?= $title ?></a></li>
             <?php
             ++$i;
         }  // i는 4
