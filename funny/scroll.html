@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <title>scroll</title>
+    <style>
+        header {padding: 70px;}
+        nav {float: right; padding: 5px;}
+        ul {list-style: none; padding-left: 0px;}
+        div {background: #dee2e6; margin: auto; text-align: center; color: white; width: 100%;}
+
+        article {float: left; padding: 20px;}
+        button {width: 100px; height: 50px;
+            background-color:white; color: black;
+            border: none; margin: 2px; display: inline-block; padding: 15px 0; font-size: 15px; cursor: pointer;}
+        button:hover {text-decoration: underline; color: blueviolet;}
+        #d1
+        {
+            background-image: url("https://cdn.univ20.com/wp-content/uploads/2017/09/a972635fad14f990ce8e31503dc46075.jpg");
+            height: 500px; width: 800px;
+            min-height: 100%; min-width: 100%;
+            -webkit-background-size: cover;
+            opacity: 0.7;
+        }
+        #d2
+         {
+             background-image: url("http://ticketimage.interpark.com/Movie/still_image/V18/V1801997s_01.gif");
+             height: 500px; width: 100%;
+             min-height: 100%; min-width: 100%;
+             -webkit-background-size: cover;
+         }
+        #d3
+        {
+            background-image: url("https://t1.daumcdn.net/cfile/tistory/145BA03E51009B4B0C");
+            height: 500px; width: 100%;
+            min-height: 100%; min-width: 100%;
+            -webkit-background-size: cover;
+        }
+        #d4
+        {
+            background-image: url("http://ticketimage.interpark.com/Movie/still_image/V18/V1801997s_01.gif");
+            height: 500px; width: 100%;
+            min-height: 100%; min-width: 100%;
+            -webkit-background-size: cover;
+        }
+        .blur {
+            top:0; left:0; right:0; bottom:0;
+            z-index: -1;
+            -webkit-filter: blur(2px);
+        }
+    </style>
+    <script>
+        function fnMove(seq){
+            var offset = $("#d"+seq).offset(); //#이 id 지정,절대좌표가 있는 객체 가져옴
+            $('html, body').animate({scrollTop : offset.top}, 400);//400은 시간 값
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>영화관련된거 만들고 싶어</h1>
+</header>
+<nav>
+    <ul>
+        <li><button onclick="fnMove('1')">#영화1</button></li>
+        <li><button onclick="fnMove('2')">#영화2</button> </li>
+        <li><button onclick="fnMove('3')">#영화3</button></li>
+        <li><button onclick="fnMove('4')">#영화4</button></li>
+    </ul>
+</nav>
+
+<article>
+    <div id="d1" class="blur"></div>
+    <div id="d2" class="blur"></div>
+    <div id="d3" class="blur"></div>
+    <div id="d4" class="blur"></div>
+</article>
+
+</body>
+</html>
