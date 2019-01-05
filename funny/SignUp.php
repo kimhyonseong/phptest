@@ -57,9 +57,11 @@
         }
     </style>
     <script>
-        function check() {
-            alert('되니?');
-            //window.open("member/ID_ch.php","","width=100,height=100");
+        function check1() {
+            if(document.getElementById('ID').value) {
+                window.open('member/ID_ch.php?ID=' + document.getElementById('ID').value, '', 'width=500,height=100');
+            }
+            else alert('빈칸을 입력해주세요.');
         }
     </script>
 </head>
@@ -74,7 +76,7 @@
             </div>
             <div>
                 <input type="text" name="ID" id="ID" placeholder="ID">
-                <input type="button" id="check" onclick="window.open('member/ID_ch.php','','width=500,height=100');" value="ID check">
+                <input type="button" id="check" value="ID check" onclick="check1();">
             </div>
             <div id="pw">
                 <input type="password" name="pwd" placeholder="Pwd">

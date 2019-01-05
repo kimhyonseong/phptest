@@ -7,7 +7,7 @@
      */
     include_once __DIR__ . '/../DBconnect/DBconnect.php';
 
-    $ID = mysqli_real_escape_string($DB_connect,$_GET['ID']);
+    $ID = htmlspecialchars($_GET['ID']);
 
     $query = "SELECT ID FROM member WHERE ID='$ID'";
     $result = mysqli_query($DB_connect,$query);

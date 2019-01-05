@@ -5,7 +5,7 @@
      * Date: 2019-01-04
      * Time: 오후 6:51
      */
-    //include_once __DIR__.'/../DBconnect/DBconnect.php';
+    include_once __DIR__.'/../DBconnect/DBconnect.php';
     $special = "/[~!@#$%^&*()_\-\+\=\\\'\"\<>,\.\|;:`\/]/";  //특수문자 패턴
 
     $real_name = mysqli_real_escape_string($DB_connect,$_POST['name']);
