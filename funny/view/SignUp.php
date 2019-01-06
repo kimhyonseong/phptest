@@ -50,7 +50,10 @@
         #E-mail input {
             width: 150px;
         }
-        #submit {
+        .button1 {
+            margin-right: 10px;
+        }
+        .button {
             width: 100px;
             height: 40px;
             text-align: center;
@@ -67,7 +70,7 @@
 </head>
 <body>
 <div>
-    <form action="member/join.php" method="post">
+    <form action="../member/join.php" method="post">
         <div>
             <h1>Join us</h1>
             <p>Please fill in the box.</p>
@@ -87,7 +90,7 @@
                 @
                 <input type="text" name="E-mail2" id="E-mail2" placeholder="Domain">
             </div>
-            <input type="submit" id="submit" value="Next">
+            <input type="submit" class="button" value="Next">
         </div>
     </form>
 </div>

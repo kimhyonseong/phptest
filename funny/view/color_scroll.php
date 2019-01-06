@@ -56,7 +56,6 @@
             position: absolute;
             text-align: center;
             margin-top: 20%;
-
         }
     </style>
     <script>
@@ -75,14 +74,14 @@
         <a href="SignUp.php">Join</a>
     </div>
     <div style="float: right">
-        <a href="">Log in</a>
+        <a href="Login.php">Log in</a>
     </div>
 </nav>
 <div>
-    <iframe id="violet" src="color_page/violet.php" scrolling="auto"></iframe>
-    <iframe id="sky" src="color_page/sky.php" scrolling=""></iframe>
-    <iframe id="wine" src="color_page/wine.php" scrolling=""></iframe>
-    <iframe id="black" src="color_page/black.php" scrolling=""></iframe>
+    <iframe id="violet" src="../color_page/violet.php" scrolling="auto"></iframe>
+    <iframe id="sky" src="../color_page/sky.php" scrolling=""></iframe>
+    <iframe id="wine" src="../color_page/wine.php" scrolling=""></iframe>
+    <iframe id="black" src="../color_page/black.php" scrolling=""></iframe>
     <div id="Pages" class="Fixed">
         <div id="se1">
             <input type="button" class="RoundButton" value="1" onclick="move('violet')">
