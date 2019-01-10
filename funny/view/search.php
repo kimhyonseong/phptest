@@ -2,9 +2,10 @@
     /**
      * Created by PhpStorm.
      * User: KimHyonSeong
-     * Date: 2019-01-06
-     * Time: 오후 2:01
+     * Date: 2019-01-10
+     * Time: 오후 4:55
      */
+
     session_start();
     ?>
 <!DOCTYPE html>
@@ -17,22 +18,20 @@
 <header>
     <?php
         if(isset($_SESSION['login']))
-        {
-            # 로그인 했으면
-            include_once 'header/Login_header.php';
-        }
+            include_once __DIR__.'/header/Login_header.php';
         else
-        {
-            # 로그인 안했으면
-            include_once 'header/header.php';
-        }
+            include_once __DIR__.'/header/header.php';
     ?>
 </header>
-<article>
+<nav>
     <br>
     <form method="get" action="search.php">
         <input type="text" name="KeyWord" placeholder="search"><input type="submit">
     </form>
+    <br>
+</nav>
+<article>
+
 </article>
 </body>
 </html>

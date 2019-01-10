@@ -16,8 +16,8 @@
     if($check['ID']==null)
     {
         $msg = "사용 가능한 ID 입니다.";
-        //echo "<script>alert('$msg'); window.close();</script>";
-        var_dump($check['ID']);
+        echo "<script>alert('$msg'); window.close();</script>";
+        //var_dump($check['ID']);
     }
     else
     {

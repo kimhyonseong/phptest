@@ -6,10 +6,12 @@
      * Time: 오후 2:07
      */
     session_start();
-    if($_SESSION['login'] == true)
+    if(isset($_SESSION['login']))
     {
-        header('Location: ../view/main.php');
+        #header('Location: ../view/main.php');
+        header('Location: '.$_SERVER['HTTP_REFERER']); #이전 페이지로 test
     }
+
     ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -70,6 +72,7 @@
             <input type="button" class="button" value="Find ID or PW" style="font-size: 13px;" onclick="location.href=''">
             <input type="button" class="button" value="Join" onclick="location.href='SignUp.php'">
         </div>
+        <input type="hidden" name="prePage" value="<?= $_SERVER['HTTP_REFERER']; #이전 페이지 주소?>">
     </form>
 </article>
 </body>

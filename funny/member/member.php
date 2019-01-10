@@ -17,6 +17,8 @@
     $E_mail = $real_Email1 . mysqli_real_escape_string($DB_connect,"@") . $real_Email2;
     $real_ID = mysqli_real_escape_string($DB_connect,$_POST['ID']);
 
+    $pre_page=$_POST['prePage']; #이전 페이지 정보 담겨있음
+
     $member_query=mysqli_query($DB_connect,"SELECT * FROM member WHERE ID='$real_ID'");
     $member = mysqli_fetch_array($member_query);
     ?>

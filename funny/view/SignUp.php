@@ -62,7 +62,7 @@
     <script>
         function check1() {
             if(document.getElementById('ID').value) {
-                window.open('member/ID_ch.php?ID=' + document.getElementById('ID').value, '', 'width=500,height=100');
+                window.open('../member/ID_ch.php?ID=' + document.getElementById('ID').value, '', 'width=500,height=100');
             }
             else alert('빈칸을 입력해주세요.');
         }
@@ -92,6 +92,7 @@
             </div>
             <input type="submit" class="button" value="Next">
         </div>
+        <input type="hidden" name="prePage" value="<?=$_SERVER['HTTP_REFERER']; #이전 페이지 주소 담기?>">
     </form>
 </div>
 </body>

@@ -67,15 +67,16 @@
 </head>
 <body>
 <nav>
-    <div style="float: left">
-        <a href="">Home</a>
-    </div>
-    <div style="float: right; margin-right: 10px">
-        <a href="SignUp.php">Join</a>
-    </div>
-    <div style="float: right">
-        <a href="Login.php">Log in</a>
-    </div>
+    <?php
+        if(isset($_SESSION['login']))
+        {
+            include_once 'header/Login_header.php';
+        }
+        else
+        {
+            include_once 'header/header.php';
+        }
+    ?>
 </nav>
 <div>
     <iframe id="violet" src="../color_page/violet.php" scrolling="auto"></iframe>

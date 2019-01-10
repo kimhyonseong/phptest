@@ -6,7 +6,7 @@
      * Time: 오후 2:00
      */
     session_start();
-    if($_SESSION['login']==true)
+    if(isset($_SESSION['login']))
     {
         header("Location: main.php");
     }
@@ -24,5 +24,6 @@
 </head>
 <body>
 회원가입 완료
+<input type="button" onclick="location.href='<?=$_SERVER['QUERY_STRING']; # 물음표 뒤에 이전 페이지 정보를 넣어서 쿼리스트링으로 뒤에 쿼리만 가져옴?>'" value="이전페이지로">
 </body>
 </html>

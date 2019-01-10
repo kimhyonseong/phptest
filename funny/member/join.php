@@ -6,7 +6,7 @@
      * Time: 오후 6:51
      */
     include_once __DIR__.'/../DBconnect/DBconnect.php';
-    include_once 'member.php';
+    include_once __DIR__.'/member.php';
 
     if( $real_ID==null || $real_pwd==null || $real_Email1==null || $real_Email2==null || $real_pwd_ch==null || $real_name==null) # 비었을시
     {
@@ -35,6 +35,6 @@
     {
         $insert_query = "INSERT INTO member(ID,name,pwd,Email) VALUES('$real_ID','$real_name','$real_pwd','$E_mail')";
         mysqli_query($DB_connect,$insert_query);
-        header('Location: ../view/ok_page.php'); # 어디로 이동할지
+        header('Location: ../view/ok_page.php?'.$pre_page); # 'pre_page'에 이전 주소 담겨있음
     }
 ?>
