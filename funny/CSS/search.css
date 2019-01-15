@@ -1,0 +1,14 @@
+.search_box{
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border: 3px solid #ccc;
+    height: 15vh;
+    width: 40vw;
+    text-align: center;
+    font-size: 7vh;
+}
+.search_box:focus{
+    border: 3px solid #555;
+}

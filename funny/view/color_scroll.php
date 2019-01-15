@@ -12,12 +12,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Color_Scroll</title>
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/header.css">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <style>
-        .Fixed {
-            position:fixed;
-        }
         body {
             margin: 0px;
             font-family: 'Fredericka the Great', cursive;
@@ -41,22 +39,6 @@
         #se2 {position: absolute; top: -30px;}
         #se3 {position: absolute; top: 30px;}
         #se4 {position: absolute; top: 90px;}
-        nav {
-            display: inline;
-            position: fixed;
-            width: 100%;
-        }
-        nav div {
-            position: relative;
-            width: 70px;
-            height: 200px;
-        }
-        nav div a {
-            width: 100%;
-            position: absolute;
-            text-align: center;
-            margin-top: 20%;
-        }
     </style>
     <script>
         function move(page) {
@@ -66,7 +48,7 @@
     </script>
 </head>
 <body>
-<nav>
+<nav class="fixed_header">
     <?php
         if(isset($_SESSION['login']))
         {
@@ -83,7 +65,7 @@
     <iframe id="sky" src="../color_page/sky.php" scrolling=""></iframe>
     <iframe id="wine" src="../color_page/wine.php" scrolling=""></iframe>
     <iframe id="black" src="../color_page/black.php" scrolling=""></iframe>
-    <div id="Pages" class="Fixed">
+    <div id="Pages" style="position: fixed">
         <div id="se1">
             <input type="button" class="RoundButton" value="1" onclick="move('violet')">
         </div>

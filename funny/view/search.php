@@ -13,35 +13,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="../CSS/header.css" rel="stylesheet">
+    <link href="../CSS/search.css" rel="stylesheet">
+    <link href="../CSS/content.css" rel="stylesheet">
+    <script>
+        function order(self) {
+            //버튼 값 바뀌면서 오름차순 내림차순 바뀌게 하기
+            if (self.value === '밝은색 정렬')
+            {
+                self.value = '어두운색 정렬';
+
+            }
+            else if (self.value === '어두운색 정렬')
+            {
+                self.value = '밝은색 정렬';
+            }
+        }
+    </script>
 </head>
 <body>
-<header>
+<header class="fixed_header">
     <?php
         if(isset($_SESSION['login']))
             include_once __DIR__.'/header/Login_header.php';
         else
             include_once __DIR__.'/header/header.php';
-        include_once __DIR__.'/../content/content.php';
+
     ?>
 </header>
-<nav>
-    <br>
+<nav class="content_center">
+    <br><br><br><br><br><br>
     <form method="get" action="search.php">
-        <input type="text" name="KeyWord" value="<?=$_GET['KeyWord']?>"><input type="submit">
+        <input type="text" class="search_box" name="KeyWord" placeholder="search" value="<?=$_GET['KeyWord']?>">
     </form>
     <br>
 </nav>
-<article>
+<article class="content_center">
     <?php
-
-        while($search_result=mysqli_fetch_array($result)) {
-            echo '<div style="width: 200px; height: 300px; border: black 1px solid; float: left; margin: 10px;">';
-            echo '<div style="background-color: ' . $search_result['code'] . '; width: 150px; height: 200px;"></div>';
-            echo '<div>' . $search_result['name'] . '</div>';
-            echo '</div>';
-            //var_dump($search_result['0']);
-            //echo "<br>";
-        }
+        include_once __DIR__.'/../content/content.php';
     ?>
 </article>
 </body>

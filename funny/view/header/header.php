@@ -8,14 +8,14 @@
     ?>
 <html>
 <body>
-    <div style="float: left">
-        <a href="main.php">Home</a>
+    <div class="header_box" style="float: left; margin-left: 20px">
+        <a class="header_link" href="main.php">Home</a>
     </div>
-    <div style="float: right; margin-right: 10px">
-        <a href="SignUp.php">Join</a>
+    <div class="header_box" style="float: right;">
+        <a class="header_link" href="SignUp.php">Join</a>
     </div>
-    <div style="float: right">
-        <a href="Login.php">Log in</a>
+    <div class="header_box" style="float: right">
+        <a class="header_link" href="Login.php">Log in</a>
     </div>
 </body>
 </html>

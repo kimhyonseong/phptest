@@ -8,14 +8,14 @@
     ?>
 <html>
 <body>
-    <div style="float: left">
-        <a href="main.php">Home</a>
+    <div class="header_box">
+        <a class="header_link" href="main.php">Home</a>
     </div>
-    <div style="float: right">
-        <a href="../member/logout.php">Log out</a>
+    <div class="header_box">
+        <a class="header_link" href="../member/logout.php">Log out</a>
     </div>
-    <div style="float: right">
-        <a href="../member/withdrawal.php">Withdrawal</a>
+    <div class="header_box">
+        <a class="header_link" href="../member/withdrawal.php">Withdrawal</a>
     </div>
 </body>
 </html>
