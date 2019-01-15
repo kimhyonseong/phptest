@@ -18,7 +18,7 @@
         while($search_result=mysqli_fetch_array($result)) {
             echo '<div class="content">';
             echo '<div style="background-color: ' . $search_result['code'] . '; width: 150px; height: 200px; margin: auto"></div>';
-            echo '<div>' . $search_result['name'] . '</div>';
+            echo '<div>' . '<a href="evaluation.php?color='.$search_result['name'].'">' . $search_result['name'] . "</a>" .'</div>';
             echo '</div>';
         }
     }
@@ -35,7 +35,7 @@
         while($search_result=mysqli_fetch_array($result)) {
             echo '<div class="content">';
             echo '<div style="background-color: ' . $search_result['code'] . '; width: 150px; height: 200px; margin: auto"></div>';
-            echo '<div>' . $search_result['name'] . '</div>';
+            echo '<div>' . '<a href="evaluation.php?color='.$search_result['name'].'">' . $search_result['name'] . "</a>" .'</div>';
             echo '</div>';
         }
     }

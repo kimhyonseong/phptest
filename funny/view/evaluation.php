@@ -2,44 +2,42 @@
     /**
      * Created by PhpStorm.
      * User: KimHyonSeong
-     * Date: 2019-01-06
-     * Time: 오후 2:01
+     * Date: 2019-01-15
+     * Time: 오후 9:49
      */
     session_start();
+    if (!isset($_SESSION['login']))
+    {
+        header('Location: Login.php');
+    }
     ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Main</title>
-    <link rel="stylesheet" href="../CSS/header.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Evaluation</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="../CSS/header.css" rel="stylesheet">
     <link href="../CSS/search.css" rel="stylesheet">
     <link href="../CSS/content.css" rel="stylesheet">
 </head>
 <body>
-<header>
+<header class="fixed_header">
     <?php
-        if(isset($_SESSION['login']))
-        {
-            # 로그인 했으면
-            include_once 'header/Login_header.php';
-        }
-        else
-        {
-            # 로그인 안했으면
-            include_once 'header/header.php';
-        }
+        include_once __DIR__.'/header/Login_header.php';
     ?>
 </header>
-<article class="content_center">
+<nav class="content_center">
     <br><br><br><br><br><br>
     <form method="get" action="search.php">
         <input type="text" class="search_box" name="KeyWord" placeholder="search">
-        <a href="search.php?KeyWord=all">모든 색깔 보기</a>
     </form>
+    <br>
+</nav>
+<article>
+    <?php
+
+    ?>
 </article>
 </body>
 </html>

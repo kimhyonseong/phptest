@@ -9,7 +9,7 @@
     include_once __DIR__.'/member.php';
     session_start();
 
-    $pre_page = $_POST['request'];  # 로그인 했던 페이지
+    $pre_page = $_POST['prePage'];  # 로그인 했던 페이지
 
     if ($real_ID==null || $real_pwd==null)  # 로그인시 빈칸일 경우
     {

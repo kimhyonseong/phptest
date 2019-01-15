@@ -15,7 +15,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ok</title>
     <style>
         body {
             background-image: url("https://wallpapercave.com/wp/wp2037149.jpg");

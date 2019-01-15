@@ -12,7 +12,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Search</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="../CSS/header.css" rel="stylesheet">
     <link href="../CSS/search.css" rel="stylesheet">
