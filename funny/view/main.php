@@ -14,7 +14,6 @@
     <title>Main</title>
     <link rel="stylesheet" href="../CSS/header.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="../CSS/header.css" rel="stylesheet">
     <link href="../CSS/search.css" rel="stylesheet">
     <link href="../CSS/content.css" rel="stylesheet">
@@ -36,10 +35,9 @@
 </header>
 <article class="content_center">
     <br><br><br><br><br><br>
-    <form method="get" action="search.php">
-        <input type="text" class="search_box" name="KeyWord" placeholder="search">
-        <a href="search.php?KeyWord=all">모든 색깔 보기</a>
-    </form>
+    <?php
+        include_once __DIR__.'/search_box/search_box.php';
+    ?>
 </article>
 </body>
 </html>

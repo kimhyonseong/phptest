@@ -28,11 +28,9 @@
     ?>
 </header>
 <nav class="content_center">
-    <br><br><br><br><br><br>
-    <form method="get" action="search.php">
-        <input type="text" class="search_box" name="KeyWord" placeholder="search">
-    </form>
-    <br>
+    <?php
+        include_once __DIR__.'/search_box/search_box.php';
+    ?>
 </nav>
 <article>
     <?php

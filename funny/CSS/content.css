@@ -8,3 +8,50 @@
     text-align: center;
     margin: auto;
 }
+
+.inf_box
+{
+    width: 60vw;
+    height: 55vh;
+    margin: auto; <!--/*이게 가운데 정렬*/-->
+    text-align: center;
+}
+.inf_color_box
+{
+    width: 49.5%;
+    height: 75%;
+    display: inline-block;
+}
+.inf_color_box_in
+{
+    padding-right: 5px;
+    float: right;
+    margin-right: 10px;
+    width: 60%;
+    height: 100%
+}
+.inf_text_box
+{
+    width: 49.5%;
+    height: 75%;
+    display: inline-block;
+}
+.inf_text_box_in
+{
+    padding-left: 5px;
+    float: left;
+    margin-left: 10px;
+    width: 60%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 100%;
+}
+.color_evaluation{
+    width: 100%;
+    text-align: center;
+}
+.error_box
+{
+    top: 40%;
+    position: relative;
+}

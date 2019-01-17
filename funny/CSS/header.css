@@ -2,6 +2,7 @@
     display: inline;
     position: fixed;
     width: 100%;
+    background-color: white;
 }
 .header_box {
     position: relative;
