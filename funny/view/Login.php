@@ -9,7 +9,7 @@
     if(isset($_SESSION['login']))
     {
         #header('Location: ../view/main.php');
-        header('Location: '.$_SERVER['HTTP_REFERER']); #이전 페이지로 test
+        //header('Location: '.$_SERVER['HTTP_REFERER']); #이전 페이지로 test
     }
 
     ?>

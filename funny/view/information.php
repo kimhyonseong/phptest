@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link href="../CSS/header.css?b" rel="stylesheet">
     <link href="../CSS/search.css" rel="stylesheet">
-    <link href="../CSS/content.css?jh" rel="stylesheet">
+    <link href="../CSS/content.css?j" rel="stylesheet">
     <script>
         function len_char() {
             //var ABC = document.getElementById();
