@@ -50,7 +50,7 @@
 </nav>
 <article class="content_center">
     <?php
-        include_once __DIR__.'/../content/content.php';
+        include_once __DIR__ . '/../content/colors.php';
     ?>
 </article>
 </body>

@@ -48,7 +48,7 @@
     </script>
 </head>
 <body>
-<nav class="fixed_header">
+<nav class="fixed_header" style="background-color: rgba(255,255,255,0);">
     <?php
         if(isset($_SESSION['login']))
         {
