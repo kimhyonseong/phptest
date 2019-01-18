@@ -13,9 +13,10 @@
     <meta charset="UTF-8">
     <title>Information</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link href="../CSS/header.css?b" rel="stylesheet">
     <link href="../CSS/search.css" rel="stylesheet">
-    <link href="../CSS/content.css?s" rel="stylesheet">
+    <link href="../CSS/content.css?jh" rel="stylesheet">
     <script>
         function len_char() {
             //var ABC = document.getElementById();
@@ -51,21 +52,6 @@
             console.log(document.getElementsByName('score')[0].value);
         }
     </script>
-    <style>
-        .sum
-        {
-            border: 3px solid #ccc;
-            background-color: white;
-            text-align: center;
-            width: 150px;
-            height: 50px;
-            -webkit-transition: 0.5s;
-        }
-        .sum:hover
-        {
-            border: 3px lime solid;
-        }
-    </style>
 </head>
 <body>
 <header class="fixed_header">

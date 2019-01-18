@@ -20,7 +20,7 @@
     else if($member['ID'] == $real_ID && $member['pwd'] == $real_pwd) # 같으면 로그인
     {
         $_SESSION['login']=true;        # 로그인 세션 생성
-        $_SESSION['name']=$real_name;   # 이름으로 사용자 구분
+        $_SESSION['id']=$real_ID;   # 이름으로 사용자 구분
         #header('Location: '.$_SERVER['HTTP_REFERER']);
         header('Location: '.$pre_page); # 로그인 했던 페이지로 이동
     }
