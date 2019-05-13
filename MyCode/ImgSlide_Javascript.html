@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+    *{margin: 0; padding: 0;}
+    #slide{
+      position:relative;
+      width: 500px; height: 250px;
+      top: 50px; left: 190px;
+
+    }
+    #slide ul{
+      position:relative;
+      width: 500px; height: 250px;
+      overflow: hidden;  /*영역 안에 들어오지 않는 자식태그는 모두 숨겨라*/
+      top: 0; left: 0;
+    }
+    #slide ul li{
+      position:absolute;
+      left:0;
+      display: block;
+      float: left;
+    }
+    #slide_box li img{
+      width: 500px; height: 250px;
+    }
+    #left_bt{
+      width: 100px; height: 100px;
+      position: absolute;
+      top: 130px; left: 90px;
+      display: block;
+      cursor: pointer;
+    }
+    #right_bt{
+      width: 100px; height: 100px;
+      position: absolute;
+      top: 130px; left: 690px;
+      cursor: pointer;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>-->
+        <img id="left_bt" src="#" alt="" class="prev">
+      <article id="slide">
+        <ul id="slide_box">
+          <li><img src="111.jpg" alt=""></li>
+          <li><img src="112.jpg" alt=""></li>
+          <li><img src="113.jpg" alt=""></li>
+        </ul>
+      </article>
+      <img id="right_bt" src="#" alt="" class="next">
+      <!--<a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+    </section>
+
+
+    <script type="text/javascript">
+      var IMG_SIZE_WIDTH = 500;  //이미지 가로 크기
+      var SlideSpeed = 10;                        //이미지 넘어가는 속도
+      var img_count = 0;                          //이미지 카운터 초기화
+      var s_count = 0;                            //슬라이드 카운터 초기화
+      var s_itv;
+
+      var slide_bt_L = document.getElementById('left_bt');
+      var slide_bt_R = document.getElementById('right_bt');
+      var SlideImg = document.getElementById('slide');
+      var imgList = document.getElementById('slide_box');
+      var totalNum = imgList.children.length;
+
+      for (var i = 0; i < totalNum; i++) {
+        imgList.children[i].style.display = 'none';
+      }
+      imgList.children[0].style.display = 'block';
+
+      slide_bt_R.addEventListener('click', function () {
+        S_ani_R();
+      });
+
+      function S_ani_R() {                            //오른쪽으로 슬라이드하는 함수
+
+        var s_posX = 0;                     //시작 위치
+        var new_posX = IMG_SIZE_WIDTH;      //끝 위치
+
+        if (s_count >= 2) {       //슬라이드 카운터에 따른 이미지 선택
+          var next_img = imgList.children[0];
+          var now_img = imgList.children[2];
+        } else {
+          next_img = imgList.children[parseInt(img_count + 1)];
+          now_img = imgList.children[img_count];
+        }
+
+        async function start() {
+          setInterval(await frame, 1); //함수 실행
+        }
+        s_itv = start();
+        function frame() {
+          next_img.style.display = 'block';
+
+          if (s_posX === -IMG_SIZE_WIDTH) {   //위치가 될시 함수 종료
+            clearInterval(s_itv);
+          } else {                            // 정해진 숫자만큼 움직이기
+            s_posX -= SlideSpeed;
+            now_img.style.left = s_posX + "px";
+            new_posX -= SlideSpeed;
+            next_img.style.left = new_posX + "px";
+          }
+        }
+        s_count++;
+        img_count++;
+
+        if (s_count > 2) {    //배너 수보다 많으면 숫자 초기화
+          s_count = 0;
+          img_count = 0;
+        }
+      }
+
+      slide_bt_L.addEventListener('click', function () {
+        S_ani_L();
+      });
+
+      function S_ani_L() {                        //왼쪽으로 슬라이드 하는 함수
+
+        var s_posX = 0;                     //시작 위치
+        var Next_posX = -IMG_SIZE_WIDTH;    //끝 위치
+
+        if (s_count <= 0) {                     //슬라이드 카운터에 따른 이미지 선택
+          var Now_img = imgList.children[0];
+          var Next_img = imgList.children[2];
+        } else {
+          Next_img = imgList.children[parseInt(img_count - 1)];
+          Now_img = imgList.children[img_count];
+        }
+
+        async function start() {
+          setInterval(await frame, 1); // 함수 실행
+        }
+        s_itv = start();
+        function frame() {
+          Next_img.style.display = 'block';
+
+          if (Next_posX === 0) {  //위치 도달시 이동 종료
+            clearInterval(s_itv);
+          } else {                //위치 도달시까지 계속 실행
+            s_posX += SlideSpeed;
+            Now_img.style.left = s_posX + "px";
+            Next_posX += SlideSpeed;
+            Next_img.style.left = Next_posX + "px";
+          }
+        }
+        s_count--;
+        img_count--;
+
+        if (s_count < 0) {                  //배너 수 보다 적으면 가장 큰 숫자
+          s_count = 2;
+          img_count = 2;
+        }
+      }
+
+      var AutoSlide = setInterval(S_ani_R, 3000);     //3초마다 실행 (3초마다 슬라이드)
+
+      SlideImg.addEventListener('mouseover',function () {
+        clearInterval(AutoSlide);                   //마우스 올리면 함수 종료
+      });
+      SlideImg.addEventListener('mouseout',function () {
+        AutoSlide = setInterval(S_ani_R, 3000);     //마우스 떨어지면 AutoSlide 재정의
+      });
+    </script>
+
+  </body>
+</html>
