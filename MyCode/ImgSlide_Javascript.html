@@ -86,7 +86,7 @@
       var IMG_SIZE_WIDTH = 500;  //이미지 가로 크기
       var SlideSpeed = 10;                        //이미지 넘어가는 속도
       var img_count = 0;                          //이미지 카운터 초기화
-      var s_count = 0;                            //슬라이드 카운터 초기화
+      //var s_count = 0;                            //슬라이드 카운터 초기화
       var s_itv;
 
       var slide_bt_L = document.getElementById('left_bt');
@@ -109,7 +109,7 @@
         var s_posX = 0;                     //시작 위치
         var new_posX = IMG_SIZE_WIDTH;      //끝 위치
 
-        if (s_count >= 2) {       //슬라이드 카운터에 따른 이미지 선택
+        if (img_count >= 2) {       //슬라이드 카운터에 따른 이미지 선택
           var next_img = imgList.children[0];
           var now_img = imgList.children[2];
         } else {
@@ -133,11 +133,11 @@
             next_img.style.left = new_posX + "px";
           }
         }
-        s_count++;
+        //s_count++;
         img_count++;
 
-        if (s_count > 2) {    //배너 수보다 많으면 숫자 초기화
-          s_count = 0;
+        if (img_count > 2) {    //배너 수보다 많으면 숫자 초기화
+          //s_count = 0;
           img_count = 0;
         }
       }
@@ -151,7 +151,7 @@
         var s_posX = 0;                     //시작 위치
         var Next_posX = -IMG_SIZE_WIDTH;    //끝 위치
 
-        if (s_count <= 0) {                     //슬라이드 카운터에 따른 이미지 선택
+        if (img_count <= 0) {                     //슬라이드 카운터에 따른 이미지 선택
           var Now_img = imgList.children[0];
           var Next_img = imgList.children[2];
         } else {
@@ -175,11 +175,11 @@
             Next_img.style.left = Next_posX + "px";
           }
         }
-        s_count--;
+        //s_count--;
         img_count--;
 
-        if (s_count < 0) {                  //배너 수 보다 적으면 가장 큰 숫자
-          s_count = 2;
+        if (img_count < 0) {                  //배너 수 보다 적으면 가장 큰 숫자
+          //s_count = 2;
           img_count = 2;
         }
       }
@@ -193,6 +193,5 @@
         AutoSlide = setInterval(S_ani_R, 3000);     //마우스 떨어지면 AutoSlide 재정의
       });
     </script>
-
   </body>
 </html>
