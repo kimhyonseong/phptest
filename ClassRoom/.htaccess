@@ -1,0 +1,22 @@
+RewriteEngine on
+
+#주석은 다른줄에 써야함
+
+#도메인 없이 써야함
+ErrorDocument 404 /phptest/ClassRoom/Error.html
+
+# REFERER가 비어있으면 엑세스 거부
+#RewriteCond %{HTTP_REFERER} $^
+#RewriteRule ^.*$ [F]
+
+# 경로 하위부터 적용 가능
+#RewriteCond %{REQUIRE_URL} ^$
+RewriteRule ^login$ login.php [L]
+RewriteRule home index.php [L]
+
+#RewriteRule ^1/$ http://khs.com/phptest/ClassRoom/login.php [L]
+#RewriteRule ^/(.*) $ http://newdomain.com/$1 [ R = 301, NC]
+#RewriteRule ^/(.*) khs.com/$1
+
+#RewriteRule ^news/([a-z]{1,15})/([0-9]{4})/([0-9]{1,7})/?$ news/view.mk?sn=$1&year=$2&no=$3&%{QUERY_STRING} [L]
+#RewriteRule ^/phptest/ClassRoom/([a-z])$ /phptest/ClassRoom/index.php?id=$1  [L]
