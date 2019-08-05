@@ -5,6 +5,7 @@
  * Date: 2019-07-31
  * Time: 오후 4:27
  */
+include_once $_SERVER['DOCUMENT_ROOT'].'/phptest/ClassRoom/glob.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="ko">

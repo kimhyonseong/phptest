@@ -21,9 +21,9 @@ class cipherClass{
         return openssl_encrypt($data,
                         "AES-256-CBC",
                                 $this->key,
-                        0, // true는 결과물 비트별로 분리 -> 깨질 수 있음
+                        0,
                                 $this->iv);
-    }
+    } // true는 결과물 비트별로 분리 -> 깨질 수 있음
 
     function decrypt($data){
         // 암호화 할 키

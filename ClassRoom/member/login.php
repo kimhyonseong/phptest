@@ -6,7 +6,7 @@
  * Time: 오전 10:08
  */
 
-include_once '../glob.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/phptest/ClassRoom/glob.inc.php';
 
 //echo 'login directory<br>자동 쿠키 생성';
 

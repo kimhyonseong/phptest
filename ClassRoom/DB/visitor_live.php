@@ -6,7 +6,7 @@
  * Time: 오전 11:37
  */
 
-include_once '../glob.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/phptest/ClassRoom/glob.inc.php';
 
 $ip = sprintf('%u',ip2long($_SERVER['REMOTE_ADDR']));
 $url = addslashes($_SERVER['REQUEST_URI']);

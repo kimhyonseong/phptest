@@ -17,7 +17,7 @@ if (!isset($_POST['id']) ||
     exit();
 }
 
-include_once '../glob.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/phptest/ClassRoom/glob.inc.php';
 
 $dbi = new dbClass();
 $cipher = new cipherClass();
@@ -57,7 +57,7 @@ if ($pw != $pw_ch ||
 
     if($query = $dbi->queryDB($sql)) {
         echo '성공';
-        echo '<script>alert("가입 완료!!"); location.href="//khs.com/phptest/ClassRoom/home";</script>';
+        //echo '<script>alert("가입 완료!!"); location.href="//khs.com/phptest/ClassRoom/home";</script>';
     } else {
         //echo $sql;
         echo '<script>alert("이미 가입된 아이디입니다."); history.back();</script>';

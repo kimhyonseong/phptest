@@ -6,10 +6,14 @@
  * Time: 오전 10:07
  */
 
-include_once 'glob.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/phptest/ClassRoom/glob.inc.php';
 
-if ($user_id != '') {
-    //echo $user_id.'님 환영합니다.';
+$cip = new cipherClass();
+
+$userId = $cip->decrypt($_COOKIE['userId']);
+
+if ($userId != '') {
+    //echo $userId.'님 환영합니다.';
     //$_COOKIE['user'] = '';
 
 } else {

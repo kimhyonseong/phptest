@@ -6,7 +6,7 @@
  * Time: 오전 9:59
  */
 
-include_once '../lib/class/dbClass.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/phptest/ClassRoom/glob.inc.php';
 
 $dbi = new dbClass();
 
